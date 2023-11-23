@@ -1,0 +1,37 @@
+.main{
+    text-align: center;
+    margin-top: 3rem;
+}
+.main .registerBtns{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    width: fit-content;
+    margin: 1.5rem auto;
+}
+.main .registerBtns > *{
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    transition: var(--main-transition);
+    color: white;
+    border: transparent;
+    border-radius: 0.1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.main .registerBtns > *:first-child{
+    background-color: var(--main-color);
+}
+.main .registerBtns > *:last-child{
+    background-color: var(--btn-sec-color);
+}
+.main .registerBtns > *:first-child:hover{
+    background-color: var(--hover-bg-color);
+}
+.main .registerBtns > *:last-child:hover{
+    background-color: var(--btn-sec-hover-color);
+}
+.main .video{
+    margin-top: 3rem;
+}

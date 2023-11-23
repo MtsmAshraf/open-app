@@ -1,0 +1,72 @@
+.main{
+    padding: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url('../../public/contact-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 2rem;
+}
+.main > *{
+    width: 48%;
+}
+.main h2{
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+}
+.main p{
+    font-size: 1.1rem;
+}
+.main form input[type='email'],
+.main form input[type='submit']{
+    padding: 0.75rem;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+}
+.main form input[type='email']{
+    max-width: 70%;
+    background-color: var(--main-color);
+    color: #ffffff;
+    border: 1px solid var(--text-color);
+}
+.main form input[type='email']::placeholder{
+    color:var(--text-color);
+}
+.main form input[type='email']:focus{
+    border: 1px solid white;
+}
+.main form input[type='submit']{
+    cursor: pointer;
+    background-color: #ffffff;
+    margin-left: 0.5rem;
+    color: var(--main-color);
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    border: 1px solid var(--main-color);
+}
+@media (max-width:992px) {
+    .main{
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    .main > *{
+        width: 100%;
+    }
+}
+@media (max-width:600px) {
+    .main form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .main form input[type="email"],
+    .main form input[type="submit"]{
+        max-width: 100%;
+        width: 100%;
+    }
+}

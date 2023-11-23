@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Caveat:wght@400;500;600;700&display=swap');
+.main{
+    position: relative;
+    padding-top: 10px;
+}
+.main .miniHeading{
+    position: absolute;
+    background-color: var(--heading-text);
+    color: var(--bg-color);
+    padding: 0.25rem 1rem;
+    border-radius: 1rem;
+    left: 50%;
+    top: 2rem;
+    transform: translateX(-50%);
+    font-weight: bold;
+}
+@media (max-width:660px) {
+    .main .miniHeading{
+        min-width: 217px;
+        text-align: center;
+    }
+}
+.content{
+    margin-top: 2rem;
+}
+.content .product{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+.content .product > *{
+    max-width: 48%;
+}
+.content .product .text{
+    padding-right: 4rem;
+}
+.content .product .text > span{
+    font-family: 'Caveat',sans-serif;
+    font-size: 1.6rem;
+    color: var(--main-color); 
+}
+.content .product h2{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: var(--heading-text);
+}
+.content .product p ,
+.content .product ul{
+    color: var(--text-color);
+}
+.content .product p{
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+.content .product ul{
+    font-size: 1.2rem;
+}
+.content .product ul li{
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.content .product ul li span{
+    font-size: 0.75rem;
+    color: rgb(42, 189, 42);
+}
+@media (max-width: 767px) {
+    .content .product{
+        flex-direction: column;
+    }
+    .content .product:nth-child(2){
+        flex-direction: column-reverse;
+    }
+    .content .product > *{
+        max-width: 90%;
+    }
+    .content .product .text{
+        padding-right: 0;
+    }
+}

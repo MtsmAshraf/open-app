@@ -1,0 +1,76 @@
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.4rem;
+}
+.main .icon{
+    color: var(--main-color);
+    font-size: 2rem;
+    cursor: pointer;
+}
+.main .registerBtns{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+.main .registerBtns > *{
+    font-size: 1rem;
+    padding: 0.5rem 0.75rem;
+    transition: var(--main-transition);
+    color: white;
+    border: transparent;
+    border-radius: 0.1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.main .registerBtns > *:first-child{
+    background-color: transparent;
+}
+.main .registerBtns > *:last-child{
+    background-color: var(--main-color);
+}
+.main .registerBtns > *:first-child:hover{
+    color: var(--hover-text-color);
+}
+.main .registerBtns > *:last-child:hover{
+    background-color: var(--hover-bg-color);
+}
+.main .bars{
+    color: var(--text-color);
+    transition: var(--main-transition);
+    cursor: pointer;
+    font-size: 1.4rem;
+    display: none;
+}
+.main .bars:hover{
+    color: white;
+}
+@media (max-width:767px) {
+    .main{
+        position: relative;
+    }
+    .main .bars{
+        display: block;
+    }
+    .main .registerBtns{
+        position: absolute;
+        width:70%;
+        flex-direction: column;
+        height: 0;
+        overflow: hidden;
+        transition: var(--main-transition);
+        z-index: 20;
+        transform: translateX(-50%);
+        left: 50%;
+        top: 100%;
+        justify-content: center;
+    }
+    .main:hover .registerBtns{
+        height: 100px;
+    }
+    .main .registerBtns > *{
+        width: 100%;
+    }
+}
